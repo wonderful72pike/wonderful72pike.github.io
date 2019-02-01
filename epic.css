@@ -3,6 +3,12 @@ body {
     color: #AAB6FF;
 }
 
+#submit {
+    padding: 5px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
 #header {
     font-size: 50px;
     font-family: "Arial";
@@ -10,6 +16,7 @@ body {
 
 #subheader {
     font-size: 25px;
+    color: #AAB6FF;
     font-family: "Arial";
     margin-left: 15px;
 }
