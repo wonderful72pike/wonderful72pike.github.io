@@ -2,6 +2,7 @@
 <html>
 <head>
 <meta charset="ASCII">
+<link rel="stylesheet" type="text/css" href="epic.css">
 </head>
 <body>
 <script>
@@ -36,18 +37,16 @@ $(function(){
   })
 })
 </script>
+<!-- header -->
+<div><b id="header">Robeats Web Converter</b><span id="subheader">by spotco</span></div><br/>
 <a href="https://github.com/spotco/RobeatsWebConvert2">Source</a><br/>
-<textarea id="in" style="width:1000px;height:200px">
-  paste contents of osu file here
-</textarea>
+<textarea id="in" style="width:1000px;height:200px" placeholder="Paste contents of .osu file here"></textarea>
 <br/>
 <button id="submit">CONVERT</button>
 <br/>
 <br/>
 <br/>
 <br/>
-<textarea id="out" style="width:1000px;height:200px" readonly>
-  output (paste this into the "SongMap" script in the workspace)
-</textarea>
+<textarea id="out" style="width:1000px;height:200px" placeholder="Paste contents of this box into the 'SongMap' script in Workspace" readonly></textarea>
 </body>
 </html>
