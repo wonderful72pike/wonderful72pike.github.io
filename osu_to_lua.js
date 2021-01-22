@@ -5,7 +5,12 @@ module.export("osu_to_lua", function(osu_file_contents) {
 	var rtv_lua = ""
 	var append_to_output = function(str) {
 		rtv_lua += (str + "\n")
-	}
+  }
+  
+  // append without newline
+  var append_to_output_s = function(str) {
+    rtv_lua += str
+  }
 
 	var beatmap = parser.parseContent(osu_file_contents)
 
@@ -114,13 +119,13 @@ module.export("osu_to_lua", function(osu_file_contents) {
     var track = hitobj_x_to_track_number(itr.position[0]);
 
     if (type == "slider") {
-      append_to_output(format("hold(%d,%d,%d)--%d", itr.startTime, track, itr.duration,i))
+      append_to_output_s(format("hold(%d,%d,%d)", itr.startTime, track, itr.duration, " "))
     } else {
-			append_to_output(format("note(%d,%d)--%d",itr.startTime, track,i))
+			append_to_output_s(format("note(%d,%d)",itr.startTime, track, " "))
     }
 
   }
-  append_to_output("--")
+  // append_to_output("--")
 
   append_to_output("rtv.TimingPoints = {")
   for (var i = 0; i < beatmap.timingPoints.length; i++) {
